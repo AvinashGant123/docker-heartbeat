@@ -1,0 +1,11 @@
+type: http
+  id: "health-check_prc-booking-api-preprod"
+  name: "prc-booking-api-preprod"
+  hosts: ["https://prc-booking-api-preprod.preprod.rtf.topgolf.io/monitor/health"]
+  check.request:
+    method: GET
+    headers:
+      'client_id': 'f95cef07027349508557a95598eaeaa8'
+      'client_secret': '0779025b2A1641F99cc9f03F5e416Fa1'
+  schedule: '@every 5m'
+  response.include_body: "always"
